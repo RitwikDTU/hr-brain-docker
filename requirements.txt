@@ -1,0 +1,12 @@
+sklearn
+pandas
+numpy
+lightgbm
+imblearn
+smote
+flask
+mlflow
+flask_cors
+cloudpickle
+itsdangerous
+gunicorn
