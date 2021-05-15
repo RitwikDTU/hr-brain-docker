@@ -1,0 +1,22 @@
+body {
+    background-color: #0fd3dd;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(#0000, #0000), no-repeat, fixed;
+    background-image: url(https://wallpaperaccess.com/full/3832295.jpg);
+}
+.form {
+    background-color: transparent;
+    width: 70vw;
+    margin: 50px auto;
+    padding: 20px 50px;
+    border-radius: 12px;
+}
+.form h1 {
+    color: #ffffff;
+}
+
+.button {
+    padding: 5px 30px;
+    font-size: 18px;
+    background-color:white;
+}

@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR-Brain</title>
+    <link rel="stylesheet" href={{url_for('static',filename='style1.css')}}>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    
+</head>
+<body>
+
+    <section>
+        <input type="checkbox" id="check">
+        <header>
+            </div>
+            <h2><a href="#" class="logo">HR-Brain</a></h2>
+            <div class="navigation">
+                <a href="#">Home</a>
+                <a href="#about">About HR-Brain</a>
+                <a href="#dashboard">About Monitor</a>
+                <a href="/predict">Predictor</a>
+                <a href="/monitor_">Monitor</a>
+            </div>
+            <label for="check">
+                <i class="fas fa-bars menu-btn"></i>
+                <i class="fas fa-times close-btn"></i>
+            </label>
+        </header>
+        <div class="content" style="margin-top: 8%;">
+            <div class="info">
+                <h2>is your employee staying? <br><span></span></h2>
+                <p> If you are curious whether your employee is looking for a company switch or not, this webapp can help you find the answer. With a few details of your employee, you can get an accurate result.</p>
+                <a href="#about" class="info-btn">More info</a>
+            </div>
+        </div>
+        <div class="media-icons">
+            <a href="https://www.linkedin.com/in/ritwik-shekhar-5b9a721a0"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/RitwikDTU"><i class="fab fa-github"></i></a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About HR-Brain</h2>
+        <p class="about-content" style="text-align:justify">
+            HR-Brain is a web app which has
+            a Machine Learning model running at the back. The purpose of developing this app is to
+            predict whether an employee is going to saty in a compnay or not. This model is based on the HR Analytics dataset
+            taken from Kaggle. The codes for this project can be checked in my
+            <a href="https://github.com/RitwikDTU/HR-Brain" style="color: turquoise; font-weight: bold;">github repo</a>.
+            Only 54% of workers think their employer is loyal to them, so that may lead to a greater willingness to change jobs.
+            the average number of jobs in a lifetime is 12, according to a 2019 Bureau of Labor Statistics (BLS) survey of baby boomers.
+            Many workers spend five years or less in every job, so they devote more time and energy transitioning from one job to another.
+            In its 2018 Employee Tenure Summary, the BLS reported, the median employee tenure was 4.3 years for men and 4.0 years for women.
+            Some examples of the common reasons that workers change jobs include:
+            Seeking higher pay,Better benefits and perks, Relocation to a different geographic area, Career advancement, Choosing a less stressful job,
+            Escaping an incompetent or negative boss etc.
+        </p>
+    </section>
+
+    <section id="dashboard">
+        <h2>About our Monitor system</h2>
+        <p class="about-content" style="text-align: justify;">
+            The monitor system used in this model is integrated with MLflow which is an open
+            source platform used to manage the ML lifecycle, including experimentation,
+            reproducibility, deployment, and a central model registry.  MLflow currently offers four components:<br>
+            <b>MLflow Tracking: </b>The MLflow Tracking component is an API and UI for logging parameters, code versions, metrics,
+            and output files when running your machine learning code and for later visualizing the results.
+            MLflow Tracking lets you log and query experiments using Python, REST, R API, and Java API APIs.<br>
+            <b>MLflow Projects: </b>
+            An MLflow Project is a format for packaging data science code in a reusable and reproducible way,
+            based primarily on conventions. In addition, the Projects component includes an API and command-line
+            tools for running projects, making it possible to chain together projects into workflows.<br>
+            <b>MLflow Models: </b>
+            An MLflow Model is a standard format for packaging machine learning models that can be used
+            in a variety of downstream tools—for example, real-time serving through a REST API or batch
+            inference on Apache Spark. The format defines a convention that lets you save a model in different
+            “flavors” that can be understood by different downstream tools.<br>
+            <b>MLflow Model Registry</b>
+            The MLflow Model Registry component is a centralized model store, set of APIs, and UI, to collaboratively 
+            manage the full lifecycle of an MLflow Model. It provides model lineage (which MLflow experiment and run produced the model), 
+            model versioning, stage transitions (for example from staging to production), and annotations.
+        </p>
+    </section>
+
+
+
+
+
+    <footer>
+        <p>
+            Developed with ❤️ by Ritwik
+        </p>
+        <div class="media-icons">
+            <a href="https://www.linkedin.com/in/ritwik-shekhar-5b9a721a0"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/RitwikDTU"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>

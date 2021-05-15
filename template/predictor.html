@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href={{url_for('static',filename='predictor.css')}}>
+    
+    <title>Rain Prediction</title>
+</head>
+<body>
+    <section id="prediction-form">
+        <form class="form" action="/predict", method="POST">
+            <h1 class="my-3 text-center">Predictor</h1>
+            <div class="row">
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+                        <label for="city" class="city" name="city" style="color:white">City</label><br>
+                        <select class="location" id="city" name="city" aria-label="city">
+                            <option selected>Select City</option>
+                            <option value=0>city_103</option>
+                            <option value=1>city_40</option>
+                            <option value=2>city_21</option>
+                            <option value=3>city_115</option>
+                            <option value=4>city_162</option>
+                            <option value=5>city_176</option>
+                            <option value=6>city_160</option>
+                            <option value=7>city_46</option>
+                            <option value=8>city_61</option>
+                            <option value=9>city_114</option>
+                            <option value=10>city_13</option>
+                            <option value=11>city_159</option>
+                            <option value=12>city_102</option>
+                            <option value=13>city_67</option>
+                            <option value=14>city_100</option>
+                            <option value=15>city_16</option>
+                            <option value=16>city_71</option>
+                            <option value=17>city_104</option>
+                            <option value=18>city_64</option>
+                            <option value=19>city_101</option>
+                            <option value=20>city_83</option>
+                            <option value=21>city_105</option>
+                            <option value=22>city_73</option>
+                            <option value=23>city_75</option>
+                            <option value=24>city_41</option>
+                            <option value=25>city_11</option>
+                            <option value=26>city_93</option>
+                            <option value=27>city_90</option>
+                            <option value=28>city_36</option>
+                            <option value=29>city_20</option>
+                            <option value=30>city_57</option>
+                            <option value=31>city_152</option>
+                            <option value=32>city_19</option>
+                            <option value=33>city_65</option>
+                            <option value=34>city_74</option>
+                            <option value=35>city_173</option>
+                            <option value=36>city_136</option>
+                            <option value=37>city_98</option>
+                            <option value=38>city_97</option>
+                            <option value=39>city_50</option>
+                            <option value=40>city_138</option>
+                            <option value=41>city_82</option>
+                            <option value=42>city_157</option>
+                            <option value=43>city_89</option>
+                            <option value=44>city_150</option>
+                            <option value=45>city_70</option>
+                            <option value=46>city_175</option>
+                            <option value=47>city_94</option>
+                            <option value=48>city_28</option>
+                            <option value=49>city_59</option>
+                            <option value=50>city_165</option>
+                            <option value=51>city_145</option>
+                            <option value=52>city_142</option>
+                            <option value=53>city_26</option>
+                            <option value=54>city_12</option>
+                            <option value=55>city_37</option>
+                            <option value=56>city_43</option>
+                            <option value=57>city_116</option>
+                            <option value=58>city_23</option>
+                            <option value=59>city_99</option>
+                            <option value=60>city_149</option>
+                            <option value=61>city_10</option>
+                            <option value=62>city_45</option>
+                            <option value=63>city_80</option>
+                            <option value=64>city_128</option>
+                            <option value=65>city_158</option>
+                            <option value=66>city_123</option>
+                            <option value=67>city_7</option>
+                            <option value=68>city_72</option>
+                            <option value=69>city_106</option>
+                            <option value=70>city_143</option>
+                            <option value=71>city_78</option>
+                            <option value=72>city_109</option>
+                            <option value=73>city_24</option>
+                            <option value=74>city_134</option>
+                            <option value=75>city_48</option>
+                            <option value=76>city_144</option>
+                            <option value=77>city_91</option>
+                            <option value=78>city_146</option>
+                            <option value=79>city_133</option>
+                            <option value=80>city_126</option>
+                            <option value=81>city_118</option>
+                            <option value=82>city_9</option>
+                            <option value=83>city_167</option>
+                            <option value=84>city_27</option>
+                            <option value=85>city_84</option>
+                            <option value=86>city_54</option>
+                            <option value=87>city_39</option>
+                            <option value=88>city_79</option>
+                            <option value=89>city_76</option>
+                            <option value=90>city_77</option>
+                            <option value=91>city_81</option>
+                            <option value=92>city_131</option>
+                            <option value=93>city_44</option>
+                            <option value=94>city_117</option>
+                            <option value=95>city_155</option>
+                            <option value=96>city_33</option>
+                            <option value=97>city_141</option>
+                            <option value=98>city_127</option>
+                            <option value=99>city_62</option>
+                            <option value=100>city_53</option>
+                            <option value=101>city_25</option>
+                            <option value=102>city_2</option>
+                            <option value=103>city_69</option>
+                            <option value=104>city_120</option>
+                            <option value=105>city_111</option>
+                            <option value=106>city_30</option>
+                            <option value=107>city_1</option>
+                            <option value=108>city_140</option>
+                            <option value=109>city_179</option>
+                            <option value=110>city_55</option>
+                            <option value=111>city_14</option>
+                            <option value=112>city_42</option>
+                            <option value=113>city_107</option>
+                            <option value=114>city_18</option>
+                            <option value=115>city_139</option>
+                            <option value=116>city_180</option>
+                            <option value=117>city_166</option>
+                            <option value=118>city_121</option>
+                            <option value=119>city_129</option>
+                            <option value=120>city_8</option>
+                            <option value=121>city_31</option>
+                            <option value=122>city_171</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+                        <label for="city_development_index" class="city_development_index" style="color:white"> City Development Index</label>
+                        <input type="text" class="form-control" id="city_development_index" name="city_development_index">
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+                        <label for="gender" class="gender" name="gender" style="color:white">Gender</label><br>
+                        <select class="gender" id="gender" name="gender" aria-label="gender">
+                            <option selected>Select Gender</option>
+                            <option value=1>Male</option>
+                            <option value=2>Female</option>
+                            <option value=0>Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+                        <label for="relevant_experience" class="relevant_experience" style="color:white">Relevant Experience</label><br>
+                        <select class="relevant_experience" id="relevant_experience" name="relevant_experience" aria-label="relevant_experience">
+                            <option selected>Select Experience</option>
+                            <option value=1>Has relevant experience</option>
+                            <option value=0>No relevant experience</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+                        <label for="enrolled_university" class="enrolled_university" style="color:white">Enrolled University</label><br>
+                        <select class="enrolled_university" id="enrolled_university" name="enrolled_university" aria-label="enrolled_university">
+                            <option selected>Select enrollment</option>
+                            <option value=2>no_enrollment</option>
+                            <option value=1>Full time course</option>
+                            <option value=0>Part time course</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+                        <label for="education_level" class="education_level" style="color:white">Education level</label><br>
+                        <select class="education_level" id="education_level" name="education_level" aria-label="education_level">
+                            <option selected>Select education level</option>
+                            <option value=2>Graduate</option>
+                            <option value=3>Masters</option>
+                            <option value=1>High School</option>
+                            <option value=4>Phd</option>
+                            <option value=0>Primary School</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+                        <label for="major_discipline" class="major_discipline" style="color:white">Major Discipline</label><br>
+                        <select class="major_discipline" id="major_discipline" name="major_discipline" aria-label="major_discipline">
+                            <option selected>Select major discipline</option>
+                            <option value=5>STEM</option>
+                            <option value=4>Business Degree</option>
+                            <option value=3>Arts</option>
+                            <option value=2>Humanities</option>
+                            <option value=0>No Major</option>
+                            <option value=1>Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+                        <label for="experience" class="experience" style="color:white">Experience</label><br>
+                        <select class="experience" id="experience" name="experience" aria-label="experience">
+                            <option selected>Select Experience</option>
+                            <option value=21>more than 20</option>
+                            <option value=20>20</option>
+                            <option value=19>19</option>
+                            <option value=18>18</option>
+                            <option value=17>17</option>
+                            <option value=16>16</option>
+                            <option value=15>15</option>
+                            <option value=14>14</option>
+                            <option value=13>13</option>
+                            <option value=12>12</option>
+                            <option value=11>11</option>
+                            <option value=10>10</option>
+                            <option value=9>9</option>
+                            <option value=8>8</option>
+                            <option value=7>7</option>
+                            <option value=6>6</option>
+                            <option value=5>5</option>
+                            <option value=4>4</option>
+                            <option value=3>3</option>
+                            <option value=2>2</option>
+                            <option value=1>1</option>
+                            <option value=0>less than 1</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+                        <label for="company_size" class="company_size" style="color:white">Company Size</label><br>
+                        <select class="company_size" id="company_size" name="company_size" aria-label="company_size">
+                            <option selected>Select Company Size</option>
+                            <option value=9>less than 10</option>
+                            <option value=30>10-49</option>
+                            <option value=75>50-99</option>
+                            <option value=300>100-499</option>
+                            <option value=750>500-999</option>
+                            <option value=3000>1000-4999</option>
+                            <option value=7500>5000-9999</option>
+                            <option value=10001>more than 10000</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+                        <label for="company_type" class="company_type" style="color:white">company_type</label><br>
+                        <select class="company_type" id="company_type" name="company_type" aria-label="company_type">
+                            <option selected>Select Company type</option>
+                            <option value=0>Do not know</option>
+                            <option value=6>Pvt Ltd</option>
+                            <option value=4>Funded Startup</option>
+                            <option value=3>Early Stage Startup</option>
+                            <option value=5>Public Sector</option>
+                            <option value=2>NGO</option>
+                            <option value=1>Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+                        <label for="lastnewjob" class="lastnewjob" style="color:white">Last new job</label><br>
+                        <select class="lastnewjob" id="lastnewjob" name="lastnewjob" aria-label="lastnewjob">
+                            <option selected>Select job year difference</option>
+                            <option value=5>more than 4</option>
+                            <option value=4>4</option>
+                            <option value=3>3</option>
+                            <option value=2>2</option>
+                            <option value=1>1</option>
+                            <option value=0>0</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="md-form">
+                        <label for="training_hours" class="training_hours" style="color:white">Training hours</label>
+                        <input type="text" class="form-control" id="training_hours" name="training_hours">
+                    </div>
+                </div>
+                
+                <div class="col-md-6 my-2 d-flex align-items-end justify-content-around">
+                    <button type="submit" class="btn btn-info button" style="margin-left: 100%;">Predict</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <div>
+         <h1><center> {{ prediction }} </center></h1>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+
+
+
