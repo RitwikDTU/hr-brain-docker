@@ -106,7 +106,7 @@ def monitor_():
         # gbdt=0,rf=3,dart=1,goss=2
         
         
-        GOOGLE_APPLICATION_CREDENTIALS='kubernetes-test-310311-f38459e07a5c.json'
+        GOOGLE_APPLICATION_CREDENTIALS='hranalytics-key.json'
         MLFLOW_TRACKING_USERNAME='ritwikdtu'
         MLFLOW_TRACKING_PASSWORD='ritwik2392'
 
@@ -142,7 +142,7 @@ def monitor_():
         
         
         #experiment_name='Experiment 1'
-        tracking_uri='http://34.71.109.236' # external IP
+        tracking_uri='http://35.222.184.89' # external IP
         
         #mlflow.set_experiment(experiment_name)
         #experiment=mlflow.get_experiment_by_name(experiment_name)
@@ -195,7 +195,7 @@ def monitor_():
                 #Register the model
                 #mlflow.sklearn.log_model(lgbm, "model", registered_model_name="LightBGM")
             #else:
-            mlflow.sklearn.log_model(lgbm, "model")
+            #mlflow.sklearn.log_model(lgbm, "model")
             
             return render_template("modelMonitor.html")
         
